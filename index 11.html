@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Checkbox and Radio Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        label input[type="checkbox"],
+        label input[type="radio"] {
+            display: none;
+        }
+        label .custom-checkbox,
+        label .custom-radio {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #4048c9;
+            border-radius: 4px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        label .custom-radio {
+            border-radius: 50%;
+        }
+        input[type="checkbox"]:checked + .custom-checkbox,
+        input[type="radio"]:checked + .custom-radio {
+            background-color: #4048c9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label>
+            <input type="checkbox">
+            <span class="custom-checkbox"></span>
+            Checkbox Option
+        </label>
+        <label>
+            <input type="radio" name="radio">
+            <span class="custom-radio"></span>
+            Radio Option 1
+        </label>
+        <label>
+            <input type="radio" name="radio">
+            <span class="custom-radio"></span>
+            Radio Option 2
+        </label>
+    </div>
+</body>
+</html>
